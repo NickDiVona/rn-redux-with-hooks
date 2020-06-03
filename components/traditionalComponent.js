@@ -7,8 +7,14 @@ import { changeText } from '../redux/actionCreators';
 class TraditionalComponent extends Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ paddingBottom: 20 }}>Class</Text>
+      <View
+        style={{
+          paddingTop: '10%',
+          height: '50%',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
         <TouchableOpacity
           onPress={() => this.props.changeText('Class')}
           style={{
@@ -21,19 +27,13 @@ class TraditionalComponent extends Component {
           }}
         >
           <View>
-            <Text>{this.props.sample}</Text>
+            <Text>Use Classes!</Text>
           </View>
         </TouchableOpacity>
       </View>
     );
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    sample: state.sample
-  };
-};
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
@@ -44,7 +44,4 @@ const mapDispatchToProps = (dispatch) => {
   );
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TraditionalComponent);
+export default connect(null, mapDispatchToProps)(TraditionalComponent);

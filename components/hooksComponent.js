@@ -5,14 +5,17 @@ import { changeText } from '../redux/actionCreators';
 
 //declare component
 const HooksComponent = () => {
-  //hooks version of mapStateToProps and connect
-  const sample = useSelector((state) => state.sample);
   //hooks version of mapDispatchToProps
   const dispatch = useDispatch();
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{ paddingBottom: 20 }}>Hooks</Text>
+    <View
+      style={{
+        height: '50%',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    >
       <TouchableOpacity
         onPress={() => dispatch(changeText('Hooks'))}
         style={{
@@ -25,7 +28,7 @@ const HooksComponent = () => {
         }}
       >
         <View>
-          <Text>{sample}</Text>
+          <Text>Use Hooks!</Text>
         </View>
       </TouchableOpacity>
     </View>

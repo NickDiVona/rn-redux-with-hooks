@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { sampleReducer } from './sampleReducer';
+import { featuredTextReducer } from './featuredTextReducer';
 
 export const rootReducer = combineReducers({
-  sample: sampleReducer
+  featuredText: featuredTextReducer
 });
