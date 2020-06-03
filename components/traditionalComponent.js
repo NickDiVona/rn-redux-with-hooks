@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { changeText } from '../redux/actionCreators';
@@ -7,24 +7,10 @@ import { changeText } from '../redux/actionCreators';
 class TraditionalComponent extends Component {
   render() {
     return (
-      <View
-        style={{
-          paddingTop: '10%',
-          height: '50%',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
+      <View style={styles.containerStyle}>
         <TouchableOpacity
           onPress={() => this.props.changeText('Class')}
-          style={{
-            backgroundColor: 'lightblue',
-            width: 200,
-            height: 50,
-            borderRadius: 25,
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
+          style={styles.buttonStyle}
         >
           <View>
             <Text>Use Classes!</Text>
@@ -45,3 +31,20 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(null, mapDispatchToProps)(TraditionalComponent);
+
+const styles = StyleSheet.create({
+  buttonStyle: {
+    backgroundColor: 'lightblue',
+    width: 200,
+    height: 50,
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  containerStyle: {
+    paddingTop: '10%',
+    height: '50%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+});

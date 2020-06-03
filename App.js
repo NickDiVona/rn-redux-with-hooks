@@ -9,7 +9,7 @@ import HooksComponent from './components/hooksComponent';
 const App = () => {
   return (
     <Provider store={dataStore}>
-      <View style={styles.container}>
+      <View style={styles.containerStyle}>
         <Explanation />
         <View style={{ flex: 1 }}>
           <TraditionalComponent />
@@ -23,7 +23,7 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({
-  container: {
+  containerStyle: {
     flex: 1,
     paddingTop: 40,
     backgroundColor: '#fff',
