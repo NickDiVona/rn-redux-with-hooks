@@ -2,19 +2,21 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { dataStore } from './redux/configureStore';
-import SomeText from './components/someText';
-import SomeHookyStuff from './components/someHookyStuff';
+import TraditionalComponent from './components/traditionalComponent';
+import HookComponent from './components/hookComponent';
 
-export default function App() {
+const App = () => {
   return (
     <Provider store={dataStore}>
       <View style={styles.container}>
-        <SomeText />
-        <SomeHookyStuff />
+        <TraditionalComponent />
+        <HookComponent />
       </View>
     </Provider>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
