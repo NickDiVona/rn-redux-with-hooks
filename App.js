@@ -3,14 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { dataStore } from './redux/configureStore';
 import TraditionalComponent from './components/traditionalComponent';
-import HookComponent from './components/hookComponent';
+import HooksComponent from './components/hooksComponent';
 
 const App = () => {
   return (
     <Provider store={dataStore}>
       <View style={styles.container}>
         <TraditionalComponent />
-        <HookComponent />
+        <HooksComponent />
       </View>
     </Provider>
   );
